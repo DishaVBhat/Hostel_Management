@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html >
+<head>
+  <meta charset="UTF-8">
+  <title>Login + Signup Form</title>
+  
+  <link rel="stylesheet" type="text/css" href="/static/dbms_login_signup.css">
+  
+
+  
+</head>
+
+<body>
+
+ 
+  <div class="form">
+  <div class="head" class="signup">
+    <div onclick="changeTab(this)" data-tab="login" class="login-tab">Slogin</div>
+    <div onclick="changeTab(this)" data-tab="signup" class="signup-tab">Wlogin</div>
+  </div>
+  <div class="body" id="form-body">
+    <div class="login">
+    <form action="http://127.0.0.1:5000/slogin" method="POST">
+        <div class="form-row">
+        <label for="">Userid</label>
+        <input type="text" name="uid" placeholder="userid">
+      </div>
+      <div class="form-row">
+        <label for="">Password</label>
+        <input type="password" name="pwd"  placeholder="Password">
+      </div>
+      <div class="form-row">
+        <button>Login</button>
+      </div>
+      <br><br>
+      <center>
+	  <a href="http://127.0.0.1:5000/forgot">Forgot Password</a>
+     </center>
+   </form>
+    </div>
+    <div class="signup">
+    <form action="http://127.0.0.1:5000/wlogin" method="POST">
+      <div class="form-row">
+        <label for="">Userid</label>
+        <input type="text" name="uid" placeholder="userid">
+      </div>
+      <div class="form-row">
+        <label for="">Password</label>
+        <input type="password" name="pwd" placeholder="Password">
+      </div>
+      <div class="form-row">
+        <button>Login</button>
+      </div>
+    </form>    
+    </div>
+  </div>
+</div>
+  
+<script>
+ function changeTab(ref){
+  try {
+  if(ref.getAttribute("data-tab") == "login"){
+    document.getElementById("form-body").classList.remove('active');
+    ref.parentNode.classList.remove('signup');
+  } else {
+    document.getElementById("form-body").classList.add('active');
+    ref.parentNode.classList.add('signup');
+  }
+  } catch(msg){
+    console.log(msg);
+  }
+}
+</script>
+
+   
+</body>
+</html>

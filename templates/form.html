@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<!-- saved from url=(0047)file:///C:/Users/DELL/Desktop/dbms/student.html -->
+<html>
+<head>
+<title>Request</title>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta http-equiv="Content-Type" content="text/html; charset=windows-1252">
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<link rel="stylesheet" type="text/css" href="/static/warden.css">
+<link rel="stylesheet" type="text/css" href="/static/form.css">
+<link rel="stylesheet" type="text/css" href="/static/tables.css">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+</head>
+
+<body onload="myfunction()">
+<div class="whole">
+<div class="navbar">
+  <a href="/backs/{{ uid }}">Profile</a>
+  <div style="float:right" class="subnav">
+<button class="subnavbtn">Room change<i class="fa fa-caret-down"></i></button>
+    <div class="subnav-content">
+   <a href="/rooms/{{ uid }}">Swap</a>
+<a href="/roomc/{{ uid }}">Request</a>
+   </div>
+</div>
+  <a style="float:right" href="/codes/{{ uid }}" >Codes</a>
+  <a style="float:right" href="/poll/{{ uid }}">Poll</a>
+  <a style="float:right" href="/scheme/{{ uid }}">Food Scheme</a>
+ </div> 
+</div>
+
+<div class="form">
+   <form action="http://127.0.0.1:5000/swap/{{ uid }}" method="POST">
+      <center><div class="form-row">
+        <label for="">ID</label>
+        <input type="text" name="id" placeholder="ID">
+      </div>
+  <div class="form-row">
+        <button type="Submit">Swap</button>
+        </div></center>
+      </form>
+  </div>
+
+</body>
+</html>

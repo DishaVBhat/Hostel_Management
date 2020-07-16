@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<!-- saved from url=(0047)file:///C:/Users/DELL/Desktop/dbms/student.html -->
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=windows-1252">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<link rel="stylesheet" type="text/css" href="/static/warden.css">
+<link rel="stylesheet" type="text/css" href="/static/form.css">
+<link rel="stylesheet" type="text/css" href="/static/tables.css">
+</head>
+
+<body onload="myfunction()">
+<div class="whole">
+<div class="navbar">
+  <a href="/backs/{{ uid }}">Profile</a>
+  <div style="float:right" class="subnav">
+<button class="subnavbtn">Room change<i class="fa fa-caret-down"></i></button>
+    <div class="subnav-content">
+   <a href="/rooms/{{ uid }}">Swap</a>
+<a href="/roomc/{{ uid }}">Request</a>
+   </div>
+</div>
+  <a style="float:right" href="/codes/{{ uid }}" >Codes</a>
+  <a style="float:right" href="/poll/{{ uid }}">Poll</a>
+  <a style="float:right" href="/scheme/{{ uid }}">Food Scheme</a>
+ </div> 
+</div>
+<div class="form">
+   <form action="http://127.0.0.1:5000/success/{{ uid }}/{{ uid1 }}" method="POST">
+      <center><div class="form-row">
+        <label for="">Code</label>
+        <input type="text" name="code" placeholder="RoomNumber">
+      </div>
+  <div class="form-row">
+        <button type="Submit">Swap</button>
+        </div></center>
+      </form>
+  </div>
+
+</body>
+</html>

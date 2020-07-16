@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<!-- saved from url=(0047)file:///C:/Users/DELL/Desktop/dbms/student.html -->
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=windows-1252">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<style>
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  margin:0;
+  background:url(/static/abc2.jpg);
+background-size: cover;
+background-attachment:fixed;
+  
+}
+
+.navbar {
+  overflow: hidden;
+   background: rgb(39, 46, 99,0.5); 
+ 
+}
+
+
+.navbar a {
+  float: left;
+  font-size: 20px;
+  color: white;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+}
+
+.subnav {
+  float: left;
+  overflow: hidden;
+}
+
+.subnav .subnavbtn {
+  font-size: 16px;  
+  border: none;
+  outline: none;
+  color: white;
+  padding: 14px 16px;
+  background-color: inherit;
+  font-family: inherit;
+  margin: 0;
+}
+
+.navbar a:hover, .subnav:hover .subnavbtn {
+  background-color:  black;
+}
+
+.subnav-content {
+  display: none;
+  position: absolute;
+  min-width: 160px;
+  background-color: #f9f9f9;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 1;
+}
+
+.subnav-content a {
+  float: none;
+  color: black;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+  text-align: left;
+}
+
+.subnav-content a:hover {
+  background-color: #ddd;
+}
+
+.subnav:hover .subnav-content {
+  display: block;
+}
+.h3{
+  text-align: center;
+}
+.p{
+font-size:5px;
+}
+* { 
+  box-sizing: border-box; 
+}
+.hostel 
+{
+  color: white;
+  margin-top: 15%;
+  font-size: 80px;
+  
+}
+.card {
+border:1 px solid;
+padding:10px;
+box-shadow: 5px 10px 8px 10px black;
+  max-width: 300px;
+  margin: auto;
+  text-align: center;
+  font-family: cursive;
+  color:white;
+  background-color:rgb(0,0,0,0.5);
+  font-size:20px;
+  font-weight:normal;
+}
+.form-row button {
+  background:#3399ff;
+  
+  border:none;
+  outline:none;
+  height:45px;
+  text-transform:uppercase;
+  color:#fcfcfc;
+  font-size:16px;
+  cursor:pointer;
+  margin-top:30px;
+  
+}
+.form-control{
+width:600px;
+background-color:rgb(0,0,0,0.5);
+box-shadow: 5px 10px 8px 10px black;
+border:rgb(39, 46, 99,0.7);
+border:2px solid ;
+outline:none;
+color:#fff;
+font-size:18px;
+margin-bottom:16px;
+}
+input{
+height:45px;
+}
+form .submit{
+background:black;
+
+color:#fff;
+font-size:20px;
+font-weight:bold;
+letter-spacing:2px;
+height:50px;
+margin-top:20px;
+width:85px;
+}
+form .submit:hover{
+background-color:rgb(39, 46, 99,0.5);
+cursor:pointer;
+}
+
+.contact-form{
+padding:10px;
+box-shadow: 5px 10px 8px 10px black;
+  width: 100%;;
+ background:rgb(0,0,0,0.4);
+  text-align: center;
+  font-family: arial;
+  color:white;
+  
+}
+.txt
+{
+   padding-right: 35%;
+}
+
+</style>
+</head>
+
+<body onload="myfunction()">
+<div class="whole">
+<div class="navbar">
+  <a href="/backs/{{ uid }}">Profile</a>
+   <a style="float:right" href="/logout">Logout</a>
+
+  <div style="float:right" class="subnav">
+<button class="subnavbtn">Room change<i class="fa fa-caret-down"></i></button>
+    <div class="subnav-content">
+   <a href="/rooms/{{ uid }}">Swap</a>
+<a href="/roomc/{{ uid }}">Request</a>
+   </div>
+</div>
+  <a style="float:right" href="/codes/{{ uid }}" >Codes</a>
+  <a style="float:right" href="/poll/{{ uid }}">Poll</a>
+  <a style="float:right" href="/scheme/{{ uid }}">Food Scheme</a>
+ 
+ </div> 
+</div>
+  
+
+<h2 style="text-align:center; color:white; font-size:30px;">Your Profile</h2>
+
+<div class="card">
+  <h3> {{ info[1] }} </h3>
+  <p>Room No : {{ info[2] }} </p>
+  <p>Phone number: {{ info[3] }}</p>
+  <p>Date of Birth:{{ info[4] }}</p>
+  <p>Address:{{ info[5]}}</p>
+  </div><br>
+ <div class="txt">
+ <h2 align="center" style="color:white">Feedback</h2>
+ </div>
+ <div class="contact-form">
+  <form id="contact-form" action="/send/{{ uid }}" method="POST"><center>
+     <textarea name="content" class="form-control" placeholder="Message" rows="4" required></textarea><br>
+     <input type="submit" class="form-control submit" value="Submit"></center>
+  </form>
+</div>
+
+
+
+</body></html>

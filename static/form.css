@@ -1,0 +1,45 @@
+.form-row label {
+  display:block;
+  padding:20px 10px 0px;
+  font-size:12px;
+  font-weight:600;
+  text-transform:uppercase;
+  color:white;
+  margin: 5px;
+ 
+  }
+.form-row input {
+  width:200px;
+ outline:none;
+ padding:7px 7px;
+ border:1px #aaa solid;
+ font-size:15px;
+ background:#fff;
+ display:block;
+ margin:5px;
+
+}
+.form-row button {
+  background:#131a4a;
+  width:100px;
+  border:none;
+  outline:none;
+  height:30px;
+  text-transform:uppercase;
+  color:#fcfcfc;
+  font-size:16px;
+  cursor:pointer;
+  margin-top:20px
+  margin-left:60px;
+  margin: 5px;
+}
+form {
+  position:absolute;
+  top:25%;
+  left:50%;
+  transform:translate(-50%,-50%);
+  width:400px;
+  height:200px;
+  background:rgb(0 , 0 ,0 , 1);
+  margin-top: 80px;
+}

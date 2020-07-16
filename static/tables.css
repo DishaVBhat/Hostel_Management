@@ -1,0 +1,31 @@
+.container {
+  font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
+  border-collapse: collapse;
+  width: 50%;
+  font-size: 20px;
+  color: white;
+  margin-top: 30px;
+  margin-left: 20%;
+
+}
+
+.container td, .container th {
+  border: 1px solid #ddd;
+  padding: 8px;
+}
+
+.container tr:nth-child(even){background-color:rgb(85, 87, 102,0.5);}
+
+.container tr:hover {background-color: #ddd;
+                     color: black;}
+
+.container th {
+  padding-top: 12px;
+  padding-bottom: 12px;
+  text-align: left;
+  background-color: rgb(39, 46, 99);
+  color: white;
+  font-size: bold;
+  text-transform: uppercase;
+
+}

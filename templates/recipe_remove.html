@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<!-- saved from url=(0047)file:///C:/Users/DELL/Desktop/dbms/student.html -->
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=windows-1252">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<link rel="stylesheet" type="text/css" href="static/warden.css">
+<link rel="stylesheet" type="text/css" href="static/form.css">
+</head>
+<body>
+
+<div class="navbar">
+  <a href="http://127.0.0.1:5000/backp">Profile</a>
+  <div style="float:right" class="subnav">
+  <button class="subnavbtn">Bills <i class="fa fa-caret-down"></i></button>
+   <div class="subnav-content">
+  <a href="http://127.0.0.1:5000/bill">Upload</a>
+  <a href="http://127.0.0.1:5000/bdetails">Details</a>
+  </div>
+  </div>
+  <div style="float:right" class="subnav">
+    <button class="subnavbtn">Student <i class="fa fa-caret-down"></i></button>
+    <div class="subnav-content">
+      <a href="http://127.0.0.1:5000/signup">Signup</a>
+      <a href="http://127.0.0.1:5000/sdetails">Details</a>
+      <a href="http://127.0.0.1:5000/sattendance">Attendance</a>
+      <a href="http://127.0.0.1:5000/student_remove">Remove</a>
+      <a href="http://127.0.0.1:5000/feedback">Feedback</a>
+    </div>
+  </div> 
+  <div style="float:right" class="subnav">
+    <button class="subnavbtn">Employee <i class="fa fa-caret-down"></i></button>
+    <div class="subnav-content">
+      <a href="http://127.0.0.1:5000/esignup">Add</a>
+      <a href="http://127.0.0.1:5000/edetails">Details</a>
+      <a href="http://127.0.0.1:5000/eattendance">Attendance</a>
+      <a href="http://127.0.0.1:5000/employee_remove">Remove</a>
+    </div>
+  </div> 
+  <div style="float:right" class="subnav">
+    <button class="subnavbtn">Room <i class="fa fa-caret-down"></i></button>
+    <div class="subnav-content">
+      <a href="http://127.0.0.1:5000/rdetails">Details</a>
+    </div>
+  </div>
+  <div style="float:right" class="subnav">
+    <button class="subnavbtn">Mess <i class="fa fa-caret-down"></i></button>
+    <div class="subnav-content">
+      <a href="http://127.0.0.1:5000/add">Add recepie</a>
+      <a href="http://127.0.0.1:5000/recipe_remove">Remove recepie</a>
+      <a href="http://127.0.0.1:5000/fdetails">Show recepie</a>
+      <a href="http://127.0.0.1:5000/schedule">Schedule</a>
+    </div>
+  </div>
+</div>
+
+  <form action="recipe_remove" method="POST">
+<center><div class="form-row">
+        <label for="">Recipe Name</label>
+        <input type="text" name="rname" placeholder="Recipe Name">
+ </div> 
+<div class="form-row">
+        <button>Remove</button>
+</div></center>   </form>
+
+{% with messages=get_flashed_messages() %}
+    {% if messages %}
+        {% for message in messages %}
+            <center><h3 class="flash">{{message}}</h3></center>
+         {% endfor %}
+    {% endif %}
+{% endwith %}
+
+</body></html>
